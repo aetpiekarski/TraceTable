@@ -86,22 +86,14 @@ Fimalgoritmo
 Ao se depararem com a instrução `a <- b`, os aprendizes percebem que a variável `b` não tem valor e questionam o que acontece com o algoritmo e como devem proceder. Nesse caso, são estimulados a descrever que a variável não tinha valor atribuído e, portanto, não é possível saber quais valores serão mostrados.
 
 ## Teste de mesa de estruturas de seleção
-Para fazer o teste de mesa de uma estrutura de seleção, cada condição deve constituir uma coluna da tabela, indicada entre parênteses e com um sinal de interrogação (conforme a Figura \ref{fig:testeSelecao}). 
-Por exemplo, {\fontfamily{pcr}\selectfont (a>b)? (n\
-Nos casos de teste, essas colunas recebem os valores da avaliação da condição para cada vez que a linha da condição for alcançada (V ou F). 
+Para fazer o teste de mesa de uma estrutura de seleção, cada condição deve constituir uma coluna da tabela, indicada entre parênteses e com um sinal de interrogação (conforme ilustrado abaixo). 
+Por exemplo, `(a>b)?`, `(n%2=0)?`, `(mes<=12)?`. Quando a condição for longa, o cabeçalho da tabela pode indicar a linha de código da condição. Nos casos de teste, essas colunas recebem os valores da avaliação da condição para cada vez que a linha da condição for alcançada (V ou F). 
 
-\begin{figure}[ht]
-  
-  \centering\includegraphics[width=1\linewidth]{figures/testeSelecao.png}\par 
-  \caption{Exemplo de teste de mesa para estrutura de seleção}
-  \Description{Exemplo de teste de mesa para estrutura de seleção}
-  
-\end{figure}
+![Teste do algoritmo Seleção](testeSelecao.png)
 
 Em estruturas de seleção aninhadas, as condições que não são avaliadas devem ser assinaladas com um hífen, deixando claro que o fluxo de execução do algoritmo foi desviado antes dessa condição. Um exemplo simples é o Algoritmo~\ref{alg:Maior}, com apenas uma estrutura aninhada. No teste de mesa (Figura \ref{fig:testeMaior}), é possível ver na primeira instância a condição {\fontfamily{pcr}\selectfont (a < b)?} assinalada com hífen.
 
-\begin{minipage}{0.95\linewidth}
-\begin{lstlisting}[label={alg:Maior}, caption={Maior}]
+```
 Algoritmo "Maior de dois"
 // Descrição: Maior valor com estrutura de seleção aninhada
 Var
@@ -118,9 +110,7 @@ Inicio
       fimse
    fimse
 Fimalgoritmo
-\end{lstlisting}
-\,
-\end{minipage}
+```
 
 \begin{figure}[ht]
   
@@ -132,8 +122,7 @@ Fimalgoritmo
 
 Para alguns problemas, é adequado um teste de mesa exaustivo, que consiste em explorar todos os fluxos de execução possíveis de um algoritmo. Como exemplo, considere o problema da ordenação de três valores numéricos. Para três valores, quais as combinações possíveis? Quais trocas são necessárias para ordenar cada um desses conjuntos? Uma solução é o Algoritmo~\ref{alg:Ordena}. 
  
-\begin{minipage}{0.95\linewidth}
-\begin{lstlisting}[label={alg:Ordena}, caption={Ordena}]
+```
 Algoritmo "Ordena"
 // Descrição: Ordenacao de três valores usando estruturas de 
 //            selecao alinhadas
@@ -158,9 +147,7 @@ Inicio
    fimse
    escreva (a, b, c)
 Fimalgoritmo
-\end{lstlisting}
-\,
-\end{minipage}
+```
 
 No teste da Figura \ref{fig:testeOrdena}, é possível verificar, nas colunas das condições, que todas as combinações possíveis foram testadas, garantindo a corretude do algoritmo.
 
@@ -174,8 +161,7 @@ No teste da Figura \ref{fig:testeOrdena}, é possível verificar, nas colunas da
 
 Para os algoritmos com estrutura de seleção múltipla (escolha-caso), cada caso deve ser considerado em uma coluna, explicitando a condição. O teste do Algoritmo~\ref{alg:Calculadora}, mostrado na Figura \ref{fig:testeCalculadora}, apresenta uma instância para cada caso da estrutura. Quando uma das condições é satisfeita, as demais não são avaliadas (indicado na coluna com um hífen). Na última instância, está representada a entrada não prevista em nenhum dos casos, em que é executada a cláusula {\fontfamily{pcr}\selectfont outrocaso} (linha 17).  
 
-\begin{minipage}{0.95\linewidth}
-\begin{lstlisting}[label={alg:Calculadora}, caption={Calculadora}]
+```
 Algoritmo "Calculadora"
 // Descrição: Calculadora simples com estrutura de selecao multipla
 var
@@ -197,9 +183,7 @@ inicio
    fimescolha
    escreva (a, op, b, " = ", r)
 fimalgoritmo
-\end{lstlisting}
-\,
-\end{minipage}
+```
 
 \begin{figure}[ht]
   \centering\includegraphics[width=1\linewidth]{figures/testeCalculadora.png}\par  
@@ -211,8 +195,7 @@ fimalgoritmo
 ## Teste de mesa de estruturas de repetição
 Para fazer o teste de mesa de algoritmos com estruturas de repetição, cada iteração será representada por uma linha. Nesses casos, cada instância ocupará várias linhas. Para ilustrar essa estrutura, considere o Algoritmo~\ref{alg:MaiordeN}, que tem como objetivo encontrar o maior dentre N valores lidos. 
 
-\begin{minipage}{0.95\linewidth}
-\begin{lstlisting}[label={alg:MaiordeN}, caption={Maior de N}]
+```
 Algoritmo "Maior de N"
 // Descrição: Identifica o maior dentre n valores lidos
 Var
@@ -228,9 +211,7 @@ Inicio
    fimpara   
    escreva (maior)
 Fimalgoritmo
-\end{lstlisting}
-\,
-\end{minipage}
+```
 
 Se o valor de uma variável é alterado, o novo valor deve constar na linha da iteração em que ocorre a atribuição.
 A Figura \ref{fig:testeMaiordeN} apresenta duas instâncias de teste para o Algoritmo \ref{alg:MaiordeN}. Quando a condição de parada é atingida, a condição da linha 10, que é interna ao bloco da estrutura de repetição, não é avaliada e, portanto, assinalada com um hífen.
@@ -246,8 +227,7 @@ Como exemplo de estrutura de repetição pós-teste, considere o Algoritmo \ref{
 ``Chico tem 1,50m e cresce 2 cm por ano, enquanto Juca tem 1,10m e cresce 3 cm por ano. 
 Quantos anos serão necessários para que Juca seja maior que Chico?''
 
-\begin{minipage}{0.95\linewidth}
-\begin{lstlisting}[label={alg:ChicoJuca}, caption={Chico e Juca}]
+```
 Algoritmo "Chico e Juca"
 // Descrição: Calcula quantos anos são necessários para que 
 //            Juca seja maior do que Chico
@@ -265,9 +245,7 @@ Inicio
    ate Juca > Chico
    escreva (anos)
 Fimalgoritmo
-\end{lstlisting}
-\,
-\end{minipage}
+```
 
 Na Figura \ref{fig:testeChicoJuca}, o longo teste de mesa foi suprimido (como indicado pelas reticências), apresentando as primeiras e as últimas iterações. Outra peculiaridade deste algoritmo é que não há dado de entrada, portanto, apenas uma instância de teste.
 
@@ -282,8 +260,7 @@ Na Figura \ref{fig:testeChicoJuca}, o longo teste de mesa foi suprimido (como in
 
 Nos testes de mesa, os vetores devem ser representados posição a posição, seguindo a definição da estrutura (posições contíguas de memória com acesso direto a partir do índice). Como exemplo, considere o Algoritmo \ref{alg:Dobro}, que, a partir de um valor lido, calcula o dobro e armazena, preenchendo um vetor de tamanho 10 (cada posição tem o dobro da posição anterior). 
 
-\begin{minipage}{0.95\linewidth}
-\begin{lstlisting}[label={alg:Dobro}, caption={Dobro}]
+```
 Algoritmo "Dobro"
 // Descrição: A partir de um valor lido, calcula o dobro 
 //            do valor e guarda em um vetor 
@@ -298,9 +275,7 @@ Inicio
         escreva ("N[", i, "]=", N[i])
    fimpara
 Fimalgoritmo
-\end{lstlisting}
-\,
-\end{minipage}
+```
 
 No teste de mesa (Figura \ref{fig:testeDobro}), pode-se observar a atribuição em cada posição do vetor conforme as iterações do bloco de repetição.   
 
@@ -313,8 +288,7 @@ No teste de mesa (Figura \ref{fig:testeDobro}), pode-se observar a atribuição 
 
 O Algoritmo \ref{alg:Horas} tem como funcionalidade armazenar as horas trabalhadas por dia do mês, em um vetor, e totalizar as horas do mês. Para isso, usa uma estrutura de repetição pré-teste para a inserção dos valores no vetor e uma estrutura contada (para-faça) para a totalização. Além disso, uma das informações de entrada é usada como índice do vetor, o que contribui para a compreensão do acesso a uma posição específica do vetor.
 
-\begin{minipage}{0.95\linewidth}
-\begin{lstlisting}[label={alg:Horas}, caption={Horas trabalhadas}]
+```
 Algoritmo "Horas trabalhadas"
 // Descrição: Armazena as horas trabalhadas por dia e  
 //            totaliza as horas do mês
@@ -334,9 +308,7 @@ Inicio
    fimpara
    escreva (horas, " horas")
 Fimalgoritmo
-\end{lstlisting}
-\,
-\end{minipage}
+```
 
 No teste de mesa (Figura \ref{fig:testeHoras}), é possível identificar as duas estruturas de repetição distintas (uma para a entrada dos dados, outra para a totalização das horas). 
 
