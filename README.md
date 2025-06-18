@@ -31,7 +31,7 @@ Para listar as variáveis nas colunas, é aconselhável que sigam a ordem de oco
 
 O primeiro exemplo apresentado (Algoritmo Soma) pede a soma de dois valores numéricos, cuja solução consiste em uma instrução de entrada, uma expressão aritmética e uma instrução de saída. 
 
-'''
+```
 \begin{minipage}{0.95\linewidth}
 \begin{lstlisting}[label={alg:Soma}, caption={Soma}]
 Algoritmo "Soma"
@@ -46,7 +46,7 @@ Fimalgoritmo
 \end{lstlisting}
 \,
 \end{minipage}
-'''
+```
 
 No teste de mesa (veja abaixo), a primeira coluna numera a instância de teste (coluna indicada por \#). Depois, são representadas as variáveis {\fontfamily{pcr}\selectfont x} e {\fontfamily{pcr}\selectfont y}, explicitadas como valores de entrada, a variável {\fontfamily{pcr}\selectfont soma}, como variáveis envolvida no processamento, e a coluna Saída, em que são mostrados os valores da instrução de saída. Para cada instância (neste teste constam 4 instâncias), são atribuídos os valores para as variáveis de entrada a critério do estudante (instrução leia da linha 6), realizado o cálculo, atribuindo o resultado à variável {\fontfamily{pcr}\selectfont soma} (cálculo da linha 7) e mostrado o valor da variável {\fontfamily{pcr}\selectfont soma} na coluna Saída (conforme a instrução escreva da linha 8). 
 
