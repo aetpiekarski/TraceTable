@@ -1,4 +1,4 @@
-# ARTEFATOS PARA TESTE DE MESA: MODELOS, EXEMPLOS E EXERCÍCIOS
+# ARTEFATOS PARA TESTE DE MESA: <br> MODELOS, EXEMPLOS E EXERCÍCIOS
 
 Nas disciplinas introdutórias de Algoritmos e Programação de Computadores, a resolução dos exercícios propostos deve envolver as seguintes etapas:
 - Planejamento: projetar a solução, listando os dados de entrada, as etapas de processamento necessárias e os dados de saída, contemplando os componentes abstração, decomposição e reconhecimento de padrões do PC;
@@ -91,7 +91,7 @@ Por exemplo, `(a>b)?`, `(n%2=0)?`, `(mes<=12)?`. Quando a condição for longa, 
 
 ![Teste do algoritmo Seleção](testeSelecao.png)
 
-Em estruturas de seleção aninhadas, as condições que não são avaliadas devem ser assinaladas com um hífen, deixando claro que o fluxo de execução do algoritmo foi desviado antes dessa condição. Um exemplo simples é o Algoritmo~\ref{alg:Maior}, com apenas uma estrutura aninhada. No teste de mesa (Figura \ref{fig:testeMaior}), é possível ver na primeira instância a condição {\fontfamily{pcr}\selectfont (a < b)?} assinalada com hífen.
+Em estruturas de seleção aninhadas, as condições que não são avaliadas devem ser assinaladas com um hífen, deixando claro que o fluxo de execução do algoritmo foi desviado antes dessa condição. Um exemplo simples é o Algoritmo "Maior de dois", com apenas uma estrutura aninhada. No teste de mesa, é possível ver na primeira instância a condição `(a < b)?` assinalada com hífen.
 
 ```
 Algoritmo "Maior de dois"
@@ -112,15 +112,9 @@ Inicio
 Fimalgoritmo
 ```
 
-\begin{figure}[ht]
-  
-  \centering\includegraphics[width=0.9\linewidth]{figures/testeMaior.png}\par 
-  \caption{Teste de mesa para o algoritmo Maior}
-  \Description{Teste de mesa para o algoritmo Maior}
-  
-\end{figure}
+![Teste do algoritmo Maior de dois](testeMaior.png)
 
-Para alguns problemas, é adequado um teste de mesa exaustivo, que consiste em explorar todos os fluxos de execução possíveis de um algoritmo. Como exemplo, considere o problema da ordenação de três valores numéricos. Para três valores, quais as combinações possíveis? Quais trocas são necessárias para ordenar cada um desses conjuntos? Uma solução é o Algoritmo~\ref{alg:Ordena}. 
+Para alguns problemas, é adequado um teste de mesa exaustivo, que consiste em explorar todos os fluxos de execução possíveis de um algoritmo. Como exemplo, considere o problema da ordenação de três valores numéricos. Para três valores, quais as combinações possíveis? Quais trocas são necessárias para ordenar cada um desses conjuntos? Uma solução é o Algoritmo Ordena. 
  
 ```
 Algoritmo "Ordena"
@@ -149,17 +143,11 @@ Inicio
 Fimalgoritmo
 ```
 
-No teste da Figura \ref{fig:testeOrdena}, é possível verificar, nas colunas das condições, que todas as combinações possíveis foram testadas, garantindo a corretude do algoritmo.
+No teste abaixo, é possível verificar, nas colunas das condições, que todas as combinações possíveis foram testadas, garantindo a corretude do algoritmo.
 
-\begin{figure}[ht]
-  
-  \centering\includegraphics[width=1\linewidth]{figures/testeOrdena.png}\par  
-  \caption{Teste de mesa para o algoritmo Ordena}
-  \Description{Teste de mesa para o algoritmo Ordena}
-  
-\end{figure}
+![Teste do algoritmo Ordena](testeOrdena.png)
 
-Para os algoritmos com estrutura de seleção múltipla (escolha-caso), cada caso deve ser considerado em uma coluna, explicitando a condição. O teste do Algoritmo~\ref{alg:Calculadora}, mostrado na Figura \ref{fig:testeCalculadora}, apresenta uma instância para cada caso da estrutura. Quando uma das condições é satisfeita, as demais não são avaliadas (indicado na coluna com um hífen). Na última instância, está representada a entrada não prevista em nenhum dos casos, em que é executada a cláusula {\fontfamily{pcr}\selectfont outrocaso} (linha 17).  
+Para os algoritmos com estrutura de seleção múltipla (escolha-caso), cada caso deve ser considerado em uma coluna, explicitando a condição. O teste do Algoritmo Calculadora apresenta uma instância para cada caso da estrutura. Quando uma das condições é satisfeita, as demais não são avaliadas (indicado na coluna com um hífen). Na última instância, está representada a entrada não prevista em nenhum dos casos, em que é executada a cláusula `outrocaso`.  
 
 ```
 Algoritmo "Calculadora"
@@ -185,15 +173,10 @@ inicio
 fimalgoritmo
 ```
 
-\begin{figure}[ht]
-  \centering\includegraphics[width=1\linewidth]{figures/testeCalculadora.png}\par  
-  \caption{Teste de mesa para o algoritmo Calculadora}
-  \Description{Teste de mesa para o algoritmo Calculadora}
-  
-\end{figure}
+![Teste do algoritmo Calculadora](testeCalculadora.png)
 
 ## Teste de mesa de estruturas de repetição
-Para fazer o teste de mesa de algoritmos com estruturas de repetição, cada iteração será representada por uma linha. Nesses casos, cada instância ocupará várias linhas. Para ilustrar essa estrutura, considere o Algoritmo~\ref{alg:MaiordeN}, que tem como objetivo encontrar o maior dentre N valores lidos. 
+Para fazer o teste de mesa de algoritmos com estruturas de repetição, cada iteração será representada por uma linha. Nesses casos, cada instância ocupará várias linhas. Para ilustrar essa estrutura, considere o Algoritmo "Maior de N", que tem como objetivo encontrar o maior dentre N valores lidos. 
 
 ```
 Algoritmo "Maior de N"
@@ -214,18 +197,13 @@ Fimalgoritmo
 ```
 
 Se o valor de uma variável é alterado, o novo valor deve constar na linha da iteração em que ocorre a atribuição.
-A Figura \ref{fig:testeMaiordeN} apresenta duas instâncias de teste para o Algoritmo \ref{alg:MaiordeN}. Quando a condição de parada é atingida, a condição da linha 10, que é interna ao bloco da estrutura de repetição, não é avaliada e, portanto, assinalada com um hífen.
+O teste abaixo apresenta duas instâncias para o Algoritmo "Maior de N". Quando a condição de parada é atingida, a condição `(x > maior)?`, que é interna ao bloco da estrutura de repetição, não é avaliada e, portanto, assinalada com um hífen.
 
-\begin{figure}[ht]
-  \centering\includegraphics[width=1\linewidth]{figures/testeMaiordeN.png}\par  
-  \caption{Teste de mesa para o algoritmo Maior de N}
-  \Description{Teste de mesa para o algoritmo Maior de N}
-  
-\end{figure}
+![Teste do algoritmo Maior de N](testeMaiordeN.png)
 
-Como exemplo de estrutura de repetição pós-teste, considere o Algoritmo \ref{alg:ChicoJuca}, uma solução para o problema: 
-``Chico tem 1,50m e cresce 2 cm por ano, enquanto Juca tem 1,10m e cresce 3 cm por ano. 
-Quantos anos serão necessários para que Juca seja maior que Chico?''
+Como exemplo de estrutura de repetição pós-teste, considere o Algoritmo "Chico e Juca", uma solução para o problema: <br>
+"Chico tem 1,50m e cresce 2 cm por ano, enquanto Juca tem 1,10m e cresce 3 cm por ano. <br>
+Quantos anos serão necessários para que Juca seja maior que Chico?"
 
 ```
 Algoritmo "Chico e Juca"
@@ -247,18 +225,13 @@ Inicio
 Fimalgoritmo
 ```
 
-Na Figura \ref{fig:testeChicoJuca}, o longo teste de mesa foi suprimido (como indicado pelas reticências), apresentando as primeiras e as últimas iterações. Outra peculiaridade deste algoritmo é que não há dado de entrada, portanto, apenas uma instância de teste.
+O longo teste de mesa foi suprimido (como indicado no teste abaixo pelas reticências), apresentando as primeiras e as últimas iterações. Outra peculiaridade deste algoritmo é que não há dado de entrada, portanto, apenas uma instância de teste é possível.
 
-\begin{figure}[ht]
-  \centering\includegraphics[width=1\linewidth]{figures/testeDobro.png}\par  
-  \caption{Teste de mesa para o algoritmo Chico e Juca}
-  \Description{Teste de mesa para o algoritmo Chico e Juca}
-  
-\end{figure}
+![Teste do algoritmo Chico e Juca](testeChicoJuca.png)
 
 ## Teste de mesa com vetores
 
-Nos testes de mesa, os vetores devem ser representados posição a posição, seguindo a definição da estrutura (posições contíguas de memória com acesso direto a partir do índice). Como exemplo, considere o Algoritmo \ref{alg:Dobro}, que, a partir de um valor lido, calcula o dobro e armazena, preenchendo um vetor de tamanho 10 (cada posição tem o dobro da posição anterior). 
+Nos testes de mesa, os vetores devem ser representados posição a posição, seguindo a definição da estrutura (posições contíguas de memória com acesso direto a partir do índice). Como exemplo, considere o Algoritmo Dobro, que, a partir de um valor lido e armazenado na primeira posição, calcula o dobro e armazena nas posições subsequentes, preenchendo um vetor de tamanho 10 (cada posição tem o dobro da posição anterior). 
 
 ```
 Algoritmo "Dobro"
@@ -277,16 +250,11 @@ Inicio
 Fimalgoritmo
 ```
 
-No teste de mesa (Figura \ref{fig:testeDobro}), pode-se observar a atribuição em cada posição do vetor conforme as iterações do bloco de repetição.   
+No teste de mesa, pode-se observar a atribuição em cada posição do vetor conforme as iterações do bloco de repetição.   
 
-\begin{figure}[ht]
-\centering\includegraphics[width=1\linewidth]{figures/testeDobro.png}\par  
-  \caption{Teste de mesa para o algoritmo Dobro}
-  \Description{Teste de mesa para o algoritmo Dobro}
-  
-\end{figure}
+![Teste do algoritmo Dobro](testeDobro.png)
 
-O Algoritmo \ref{alg:Horas} tem como funcionalidade armazenar as horas trabalhadas por dia do mês, em um vetor, e totalizar as horas do mês. Para isso, usa uma estrutura de repetição pré-teste para a inserção dos valores no vetor e uma estrutura contada (para-faça) para a totalização. Além disso, uma das informações de entrada é usada como índice do vetor, o que contribui para a compreensão do acesso a uma posição específica do vetor.
+O Algoritmo Horas tem como funcionalidade armazenar as horas trabalhadas por dia do mês, em um vetor, e totalizar as horas do mês. Para isso, usa uma estrutura de repetição pré-teste para a inserção dos valores no vetor e uma estrutura contada (para-faça) para a totalização. Além disso, uma das informações de entrada é usada como índice do vetor, o que contribui para a compreensão do acesso a uma posição específica do vetor.
 
 ```
 Algoritmo "Horas trabalhadas"
@@ -310,14 +278,10 @@ Inicio
 Fimalgoritmo
 ```
 
-No teste de mesa (Figura \ref{fig:testeHoras}), é possível identificar as duas estruturas de repetição distintas (uma para a entrada dos dados, outra para a totalização das horas). 
+No teste de mesa, é possível identificar as duas estruturas de repetição distintas (uma para a entrada dos dados, outra para a totalização das horas). 
 
-\begin{figure}[ht]
-\centering\includegraphics[width=1\linewidth]{figures/testeHoras.png}\par  
-  \caption{Teste de mesa para o algoritmo Horas trabalhadas}
-  \Description{Teste de mesa para o algoritmo Horas trabalhadas}
-  
-\end{figure}
+![Teste do algoritmo Horas](testeHoras.png)
+
 
 ## Observações gerais
 Em códigos mais extensos, o teste de mesa é restrito ao bloco de processamento destinado à resolução do problema.
