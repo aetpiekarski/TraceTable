@@ -1,31 +1,28 @@
 # ARTEFATOS PARA TESTE DE MESA: MODELOS, EXEMPLOS E EXERCÍCIOS
 
 Nas disciplinas introdutórias de Algoritmos e Programação de Computadores, a resolução dos exercícios propostos deve envolver as seguintes etapas:
- • Planejamento: projetar a solução, listando os dados de entrada, as etapas de processamento necessárias e os dados de saída, contemplando os componentes abstração, decomposição e reconhecimento de padrões do PC;
- • Solução algorítmica: desenvolver o fluxograma e/ou pseudocódigo, buscando generalizar a partir de casos reais ou exemplos disponíveis (componentes generalização e algoritmos do PC);
- • Testes: validar a solução, utilizando os artefatos disponibilizados (e, caso necessário, retomar as etapas anteriores para corrigir ou complementar a solução) (componente depuração do PC);
- • Implementação: codificar a solução em uma linguagem de alto nível (C/C++).
+- Planejamento: projetar a solução, listando os dados de entrada, as etapas de processamento necessárias e os dados de saída, contemplando os componentes abstração, decomposição e reconhecimento de padrões do PC;
+- Solução algorítmica: desenvolver o fluxograma e/ou pseudocódigo, buscando generalizar a partir de casos reais ou exemplos disponíveis (componentes generalização e algoritmos do PC);
+- Testes: validar a solução, utilizando os artefatos disponibilizados (e, caso necessário, retomar as etapas anteriores para corrigir ou complementar a solução) (componente depuração do PC);
+- Implementação: codificar a solução em uma linguagem de alto nível (C/C++).
  
 Os estudantes são encorajados a desenvolver esse conjunto de passos (exceto a implementação) de forma manuscrita. A metodologia de atividade desplugada contribui para a disseminação dos artefatos, pois não exige recursos computacionais e possibilita que sejam utilizados desde o ensino médio/técnico até o superior, ou em atividades de ensino destinadas à disseminação dos conceitos de PC, algoritmos e programação.
 Para cada tópico abordado, são disponibilizados exemplos, que constituem um referencial facilitador para o aprendizado, incluindo todas essas etapas (Exemplo 1, ilustrado abaixo). O uso de fluxogramas é muito adequado, pois trata-se de uma representação de mais alto nível, intuitiva à leitura, que permite a visualização dos fluxos de execução principalmente quanto às estruturas de seleção e repetição.
 
-![Exemplo incluindo todas as etapas para desenvolvi
-mento de umasolução algoritmica](exemplo.png)
+![Exemplo incluindo todas as etapas para desenvolvimento de umasolução algoritmica](exemplo.png)
 
 Para um teste de mesa, uma lista das variáveis e a atribuição dos valores aos longo do algoritmo é suficiente; é importante que o teste seja feito com mais de uma instância. Cada conjunto de dados (um exemplo concreto) de um teste define uma instância do problema. É importante avaliar especialmente o comportamento do algoritmo com os valores limites, conforme o contexto do problema.
 
 Em um algoritmo, as variáveis constituem símbolos, assim como na notação matemática; no entanto, quando se considera que o algoritmo será traduzido para uma linguagem e executado por um computador, deve-se deixar claro que as variáveis representam posições de memória.
 
 Uma representação adequada de um teste de mesa é por meio de uma tabela, organizada em quatro seções, conforme o título das colunas:
-\begin{itemize}
-    \item \#: o identificador de uma instância de teste;
-    \item Entrada: as variáveis que são informadas pelo usuário quando da realização de uma instância de teste;
-    \item Processamento: o conjunto das variáveis utilizadas no algoritmo (além das de entrada) e as  expressões lógicas (condições), quando há estruturas condicionais ou de repetição. As colunas das condições serão preenchidas com os valores lógicos, conforme as instâncias;
-    
-    \item Saída: as respostas do algoritmo, incluindo valores de variáveis e textos.  
-\end{itemize}
+- #: o identificador de uma instância de teste;
+- Entrada: as variáveis que são informadas pelo usuário quando da realização de uma instância de teste;
+- Processamento: o conjunto das variáveis utilizadas no algoritmo (além das de entrada) e as  expressões lógicas (condições), quando há estruturas condicionais ou de repetição. As colunas das condições serão preenchidas com os valores lógicos, conforme as instâncias;
+- Saída: as respostas do algoritmo, incluindo valores de variáveis e textos.
 
-     
+![Modelo para teste de mesa](testeSelecao.png)
+       
 O funcionamento do algoritmo deve ser simulado linha-a-linha. Cada instrução deve refletir sua ação, alterando os valores das variáveis e assinalando o resultados das condições no teste de mesa.
 
 ## Teste de mesa de algoritmos sequenciais
