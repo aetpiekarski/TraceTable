@@ -43,14 +43,9 @@ Inicio
 Fimalgoritmo
 ```
 
-No teste de mesa (veja abaixo), a primeira coluna numera a instância de teste (coluna indicada por #). Depois, são representadas as variáveis `x e `y, explicitadas como valores de entrada, a variável {\fontfamily{pcr}\selectfont soma}, como variáveis envolvida no processamento, e a coluna Saída, em que são mostrados os valores da instrução de saída. Para cada instância (neste teste constam 4 instâncias), são atribuídos os valores para as variáveis de entrada a critério do estudante (instrução leia da linha 6), realizado o cálculo, atribuindo o resultado à variável {\fontfamily{pcr}\selectfont soma} (cálculo da linha 7) e mostrado o valor da variável {\fontfamily{pcr}\selectfont soma} na coluna Saída (conforme a instrução escreva da linha 8). 
+No teste de mesa (veja abaixo), a primeira coluna numera a instância de teste (coluna indicada por #). Depois, são representadas as variáveis `x` e `y`, explicitadas como valores de entrada, a variável `soma`, como variáveis envolvida no processamento, e a coluna Saída, em que são mostrados os valores da instrução de saída. Para cada instância (neste teste constam 4 instâncias), são atribuídos os valores para as variáveis de entrada a critério do estudante (instrução leia), realizado o cálculo, atribuindo o resultado à variável `soma` (instrução `soma <- x + y`) e mostrado o valor da variável `soma` na coluna Saída (conforme a instrução `escreva (soma)`). 
 
-\begin{figure}[ht]
-\centering\includegraphics[width=0.8\linewidth]{figures/testeSoma.png}\par  
-  \caption{Teste de mesa para o algoritmo Soma.}
-  \Description{Teste de mesa para o algoritmo Soma.}
-  
-\end{figure}
+![Teste do algoritmo Soma](testeSoma.png)
 
 Quando há a sobreposição de valor em uma variável, isso deve ficar explícito no teste, sendo possível visualizar toda a evolução dos valores. Assim, os valores devem ser cortados com um traço (usa-se o efeito tachado nos exemplos editados digitalmente) e o novo valor é indicado ao lado. Essa situação pode ser vista no exemplo do Algoritmo~\ref{alg:Troca}, que demostra a troca de valores entre duas variáveis.
 
