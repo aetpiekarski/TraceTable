@@ -283,7 +283,7 @@ No teste de mesa, é possível identificar as duas estruturas de repetição dis
 ![Teste do algoritmo Horas](testeHoras.png)
 
 
-## Observações gerais
+## Observações
 Em códigos mais extensos, o teste de mesa é restrito ao bloco de processamento destinado à resolução do problema.
 
 Quando há inicialização de variáveis, em algoritmos com estruturas de repetição, sugere-se que a primeira linha do teste seja destinada aos valores iniciais, antes que uma instância de teste comece. 
