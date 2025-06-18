@@ -6,8 +6,8 @@ Nas disciplinas introdutórias de Algoritmos e Programação de Computadores, a 
  • Testes: validar a solução, utilizando os artefatos disponibilizados (e, caso necessário, retomar as etapas anteriores para corrigir ou complementar a solução) (componente depuração do PC);
  • Implementação: codificar a solução em uma linguagem de alto nível (C/C++).
  
-Os estudantes são encorajados a desenvolver esse conjunto de passos (exceto a implementação) de forma manuscrita. A metodologia de atividade desplugada [20] contribui para a disseminação dos artefatos, pois não exige recursos computacionais e possibilita que sejam utilizados desde o ensino médio/técnico até o superior, ou em atividades de ensino destinadas à disseminação dos conceitos de PC, algoritmos e programação.
-Para cada tópico abordado, são disponibilizados exemplos, que constituem um referencial facilitador para o aprendizado, incluindo todas essas etapas (como ilustrado abaixo). O uso de fluxogramas é muito adequado, pois trata-se de uma representação de mais alto nível, intuitiva à leitura, que permite a visualização dos fluxos de execução principalmente quanto às estruturas de seleção e repetição.
+Os estudantes são encorajados a desenvolver esse conjunto de passos (exceto a implementação) de forma manuscrita. A metodologia de atividade desplugada contribui para a disseminação dos artefatos, pois não exige recursos computacionais e possibilita que sejam utilizados desde o ensino médio/técnico até o superior, ou em atividades de ensino destinadas à disseminação dos conceitos de PC, algoritmos e programação.
+Para cada tópico abordado, são disponibilizados exemplos, que constituem um referencial facilitador para o aprendizado, incluindo todas essas etapas (Exemplo 1, ilustrado abaixo). O uso de fluxogramas é muito adequado, pois trata-se de uma representação de mais alto nível, intuitiva à leitura, que permite a visualização dos fluxos de execução principalmente quanto às estruturas de seleção e repetição.
 
 ![Exemplo incluindo todas as etapas para desenvolvi
 mento de umasolução algoritmica](exemplo.png)
