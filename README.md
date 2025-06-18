@@ -47,10 +47,9 @@ No teste de mesa (veja abaixo), a primeira coluna numera a instância de teste (
 
 ![Teste do algoritmo Soma](testeSoma.png)
 
-Quando há a sobreposição de valor em uma variável, isso deve ficar explícito no teste, sendo possível visualizar toda a evolução dos valores. Assim, os valores devem ser cortados com um traço (usa-se o efeito tachado nos exemplos editados digitalmente) e o novo valor é indicado ao lado. Essa situação pode ser vista no exemplo do Algoritmo~\ref{alg:Troca}, que demostra a troca de valores entre duas variáveis.
+Quando há a sobreposição de valor em uma variável, isso deve ficar explícito no teste, sendo possível visualizar toda a evolução dos valores. Assim, os valores devem ser cortados com um traço (usa-se o efeito tachado nos exemplos editados digitalmente) e o novo valor é indicado ao lado. Essa situação pode ser vista no exemplo do Algoritmo Troca, que executa a troca de valores entre duas variáveis.
 
-\begin{minipage}{0.95\linewidth}
-\begin{lstlisting}[label={alg:Troca}, caption={Troca}]
+```
 Algoritmo "Troca"
 // Descrição: Troca de conteúdo de duas variáveis
 Var
@@ -62,25 +61,16 @@ Inicio
    b <- aux
    escreva (a, b)
 Fimalgoritmo
-\end{lstlisting}
-\,
-\end{minipage}
+```
 
-No teste de mesa (Figura \ref{fig:testeTroca}), o conteúdo das variáveis {\fontfamily{pcr}\selectfont a} e {\fontfamily{pcr}\selectfont b} é substituído quando as instruções das linhas 9 e 10 são executadas.
+No teste de mesa (abaixo), o conteúdo das variáveis `a` e `b` é substituído quando as instruções `a <- b` e `b <- aux` são executadas.
 
-\begin{figure}[ht]
-  
-  \centering\includegraphics[width=0.8\linewidth]{figures/testeTroca.png}\par  
-  \caption{Teste de mesa para o algoritmo Troca }
-  \Description{Teste de mesa para o algoritmo Troca}
-  
-\end{figure}
+![Teste do algoritmo Troca](testeTroca.png)
 
-Outra situação que deve ser observada é com relação à inicialização de variáveis. Embora, no papel, as variáveis representadas estejam inicialmente vazias, após codificado o algoritmo (dependendo da linguagem utilizada), se as variáveis não tiverem sido inicializadas, um valor não conhecido poderá ser recuperado (lixo de memória) e resultar em erros de execução. Essa situação é ilustrada com um exercício, em que é pedida a descrição da funcionalidade do Algoritmo~\ref{alg:Inicializa}.
+Outra situação que deve ser observada é com relação à inicialização de variáveis. Embora, no papel, as variáveis representadas estejam inicialmente vazias, após codificado o algoritmo (dependendo da linguagem utilizada), se as variáveis não tiverem sido inicializadas, um valor não conhecido poderá ser recuperado (lixo de memória) e resultar em erros de execução. Essa situação é ilustrada com um exercício, em que é pedida a descrição da funcionalidade do Algoritmo Inicializa.
 
-\begin{minipage}{0.95\linewidth}
-\begin{lstlisting}[label={alg:Inicializa}, caption={Inicialização de variável}]
-Algoritmo "Troca"
+```
+Algoritmo "Inicializa"
 // Descrição: Avalia inicializacao
    a, b, aux : inteiro
 Inicio
@@ -91,11 +81,9 @@ Inicio
    b <- aux
    escreva (a, b)
 Fimalgoritmo
-\end{lstlisting}
-\,
-\end{minipage}
+```
 
-Ao se depararem com a instrução da linha 6, os aprendizes percebem que a variável {\fontfamily{pcr}\selectfont b} não tem valor e questionam o que acontece com o algoritmo e como devem proceder. Nesse caso, são estimulados a descrever que a variável não tinha valor atribuído e, portanto, não é possível saber quais valores serão mostrados.
+Ao se depararem com a instrução `a <- b`, os aprendizes percebem que a variável `b` não tem valor e questionam o que acontece com o algoritmo e como devem proceder. Nesse caso, são estimulados a descrever que a variável não tinha valor atribuído e, portanto, não é possível saber quais valores serão mostrados.
 
 ## Teste de mesa de estruturas de seleção
 Para fazer o teste de mesa de uma estrutura de seleção, cada condição deve constituir uma coluna da tabela, indicada entre parênteses e com um sinal de interrogação (conforme a Figura \ref{fig:testeSelecao}). 
